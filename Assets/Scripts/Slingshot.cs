@@ -25,13 +25,13 @@ public class Slingshot : MonoBehaviour {
 	}
 
 	void OnMouseEnter() {
-		print ("Slingshot:OnMouseEnter()");
-		launchPoint.SetActive (true);
+		//print ("Slingshot:OnMouseEnter()");
+		launchPoint.SetActive(true);
 	}
 
 	void OnMouseExit(){
-		print ("Slingshot:OnMouseExit()");
-		launchPoint.SetActive (false);
+		//print ("Slingshot:OnMouseExit()");
+		launchPoint.SetActive(false);
 	}
 
 	void OnMouseDown(){
@@ -45,7 +45,7 @@ public class Slingshot : MonoBehaviour {
 		projectile.transform.position=launchPos;
 
 		//set it to iskinematic
-		//projectile.rigidbody.isKinematic=true;
+		projectile.GetComponent<Rigidbody>().isKinematic=true;
 	}
 
 	// Use this for initialization

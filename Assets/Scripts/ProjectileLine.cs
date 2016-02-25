@@ -86,17 +86,17 @@ public class ProjectileLine : MonoBehaviour {
 				if (FollowCam.S.poi.tag == "Projectile") {
 					poi = FollowCam.S.poi;
 				} else {
-					return;// return if we didn't find a poi
+					return;
 				}
 			} else {
-				return; //if we didn't find a poi
-			}
-			AddPoint ();
-			if (poi.GetComponent<Rigidbody>().IsSleeping ()) {
-				poi = null;
+				return;
 			}
 		}
 
+		AddPoint ();
+		if (poi.GetComponent<Rigidbody>().IsSleeping ()) {
+			poi = null;
+		}
 	}
 
 
